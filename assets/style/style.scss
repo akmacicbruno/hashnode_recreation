@@ -2,6 +2,12 @@
     $remValue: ($value / 16) + rem; 
     @return $remValue;
 }
+$btn-color-blue: #2962ff;
+$border-gray: toRem(1) solid #cccccc;
+$box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$l-gray-color: #f5f7fa;
+$d-gray-color: #838890;
+
 
 html {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -61,7 +67,7 @@ html, body {
         &-img {
             width: toRem(24);
             height: toRem(24);
-            fill: #838890;
+            fill: $d-gray-color;
             &--settings {
                 &:hover {
                     background-color: white;
@@ -99,7 +105,7 @@ html, body {
         top: toRem(45);
         left: toRem(-20);
         background-color: white;
-        border: toRem(1) solid #e7e9ed;
+        border: $border-gray;
         border-radius: toRem(8);
     }
 }
@@ -111,11 +117,11 @@ html, body {
     position: fixed;
     display: flex;
     flex-direction: column;
-    background-color: #f5f7fa;
+    background-color: $l-gray-color;
     height: 100%;
     width: 15%;
     min-width: toRem(170);
-    border-right: toRem(1) solid #e7e9ed;
+    border-right: $border-gray;
     z-index: 1;
     &__logo {
         width: 100%;
@@ -130,7 +136,7 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #2962ff;
+        background-color: $btn-color-blue;
         border-radius: toRem(4);
         margin-top: toRem(35);
         width: 85%;
@@ -195,8 +201,7 @@ html, body {
         }
         &-more {
             margin-left: toRem(8);
-            border-left: toRem(1) #a0a4ab solid;
-            color: #4a505c;
+            border-left: $border-gray;
             display: none;
         }
     }
@@ -215,7 +220,7 @@ html, body {
         }
         &-img {
             height: toRem(32);
-            fill: #838890;
+            fill: $d-gray-color;
             &--settings {
                 padding: toRem(8);
                 margin-bottom: toRem(8);
@@ -268,7 +273,7 @@ html, body {
     transform: rotate(180deg);
 }
 .shadow {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: $box-shadow;
 }
 .main, .footer, .end {
     width: 85%;
@@ -284,7 +289,7 @@ html, body {
     background-color: white;
     margin-left: toRem(1);
     width: 79.6%;
-    border-bottom: toRem(1) solid #e7e9ed;
+    border-bottom: $border-gray;
     z-index: 1;
     .site-desc {
         display: flex;
@@ -307,7 +312,7 @@ html, body {
             padding: 0;
             &--text-login {
                 padding: toRem(12) toRem(20);
-                border: toRem(1) solid #f5f6f7;
+                border: $border-gray;
                 border-radius: toRem(8);
                 font-size: toRem(18);
                 font-family: inherit;
@@ -316,21 +321,21 @@ html, body {
                 font-weight: 700;
                 margin-right: toRem(12);
                 &:hover {
-                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+                    box-shadow: $box-shadow;   
                 }
             }
             &--text-register {
                 padding: toRem(12) toRem(20);
-                border: toRem(1) solid #f5f6f7;
+                border: $border-gray;
                 border-radius: toRem(8);
                 font-size: toRem(18);
                 font-family: inherit;
                 text-decoration: none;
                 color: white;
-                background-color: #2962ff;
+                background-color: $btn-color-blue;
                 font-weight: 700;
                 &:hover {
-                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+                    box-shadow: $box-shadow;   
                 }
             }
         }
@@ -373,7 +378,7 @@ html, body {
             text-decoration: none;
             font-family: inherit;
             font-weight: 600;
-            color: #3f62ff;
+            color: $btn-color-blue;
             display: inline-block;
         }
     }
@@ -400,7 +405,7 @@ html, body {
             max-width: 360px;
             margin: 0;
             margin-bottom: toRem(40);
-            color: #838890;
+            color: $d-gray-color;
             font-weight: inherit;
             font-size: toRem(20);
             line-height: 1.375;
@@ -413,7 +418,7 @@ html, body {
         justify-content: center;
         &-link {
             text-decoration: none;
-            background-color: #2962ff;
+            background-color: $btn-color-blue;
             color: white;
             padding: toRem(12) toRem(20);
             border-radius: toRem(8);
@@ -426,7 +431,7 @@ html, body {
                 display: none;
             }
             &:hover {
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+                box-shadow: $box-shadow;   
             }
         }
     }
@@ -463,12 +468,12 @@ html, body {
         display: flex;
         width: 65%;
         justify-content: center;
-        border: toRem(1) solid #e7e9ed;
+        border: $border-gray;
         border-radius: toRem(8);
         padding: toRem(32);
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        box-shadow: $box-shadow;
         &-img {
-            border: toRem(1) solid #e7e9ed;
+            border: $border-gray;
             border-radius: toRem(8);
             width: toRem(126);
             height: toRem(126);
@@ -500,7 +505,7 @@ html, body {
     display: flex;
     justify-content: space-evenly;
     padding: toRem(80) 0;
-    border-bottom: toRem(1) solid #e7e9ed;
+    border-bottom: $border-gray;
     flex-wrap: wrap;
     &__card {
         display: flex;
@@ -582,7 +587,7 @@ html, body {
         margin-bottom: toRem(40);
         &-link {
             text-decoration: none;
-            background-color: #2962ff;
+            background-color: $btn-color-blue;
             color: white;
             padding: toRem(12) toRem(32);
             border-radius: toRem(8);
@@ -592,13 +597,13 @@ html, body {
             font-family: inherit;
             font-size: toRem(18);
             &:hover {
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+                box-shadow: $box-shadow;   
             }
         }
     }
 }
 .border {
-    border: toRem(1) solid #e7e9ed;
+    border: $border-gray;
     border-radius: toRem(8);
 }
 .text-center {
@@ -664,7 +669,7 @@ html, body {
     &-link {
         text-decoration: none;
         padding: toRem(12) toRem(20);
-        border: toRem(1) solid #f5f6f7;
+        border: $border-gray;
         border-radius: toRem(8);
         font-size: toRem(18);
         font-family: inherit;
@@ -683,13 +688,13 @@ html, body {
             }
         }
         &:hover {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+            box-shadow: $box-shadow;   
         }
     }
 }
 .b-border-padding {
     padding-bottom: toRem(80);
-    border-bottom: toRem(1) solid #e7e9ed;
+    border-bottom: $border-gray;
 }
 .customers__title {
     padding: toRem(40) 0 0 0;
@@ -706,13 +711,13 @@ html, body {
     justify-content: center;
     flex-wrap: wrap;
     width: calc(100% - 80px);
-    border-bottom: toRem(1) solid #e7e9ed;
+    border-bottom: $border-gray;
     &__card {
         display: flex;
         flex-direction: column;
         margin: toRem(16);
         padding: toRem(24);
-        border: toRem(1) solid #e7e9ed;
+        border: $border-gray;
         border-radius: toRem(8);
         width: 26%;
         min-width: toRem(280);
@@ -738,7 +743,7 @@ html, body {
                 img {
                     width: inherit;
                     height: inherit;
-                    border: toRem(1) solid #e7e9ed;
+                    border: $border-gray;
                     border-radius: toRem(50);
                 }
             }
@@ -765,7 +770,7 @@ html, body {
 }
 .join-us {
     padding: toRem(80) toRem(40);
-    border-bottom: toRem(1) solid #e7e9ed;
+    border-bottom: $border-gray;
     &__title-big {
         margin: 0;
         margin-bottom: toRem(8);
@@ -802,7 +807,7 @@ html, body {
     box-sizing: border-box;
     position: relative;
     flex-direction: column;
-    border-bottom: toRem(1) solid #e7e9ed;
+    border-bottom: $border-gray;
     &__info{
         margin-bottom: toRem(80);
         display: flex;
@@ -881,7 +886,7 @@ html, body {
                     display: block;
                     white-space: nowrap;
                     text-decoration: none;
-                    background-color: #2962ff;
+                    background-color: $btn-color-blue;
                     color: white;
                     padding: toRem(12) toRem(32);
                     border-radius: toRem(8);
@@ -891,7 +896,7 @@ html, body {
                     font-family: inherit;
                     font-size: toRem(18);
                     &:hover {
-                        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+                        box-shadow: $box-shadow;   
                     }
                 }
                 &-two {
@@ -902,7 +907,7 @@ html, body {
                     margin-left: toRem(8);
                     text-decoration: none;
                     padding: toRem(12) toRem(20);
-                    border: toRem(1) solid #f5f6f7;
+                    border: $border-gray;
                     border-radius: toRem(8);
                     font-size: toRem(18);
                     font-family: inherit;
@@ -910,7 +915,7 @@ html, body {
                     color: #424242;
                     font-weight: 700;
                     &:hover {
-                        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);   
+                        box-shadow: $box-shadow;   
                     }
                 }
             }
@@ -1160,5 +1165,12 @@ html, body {
     .end {
         padding: toRem(20);
         justify-content: space-evenly;
+    }
+}
+@media only screen and (max-width: 1397px) {
+    .features {
+        &__card {
+            border: none;
+        }
     }
 }
